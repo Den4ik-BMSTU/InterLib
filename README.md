@@ -1,7 +1,7 @@
 Программа для поиска и оценки книг, что-то похожее на кинопоиск, только для книг
 
+DB_scheme.png
 
-![DB scheme.png](DB scheme.png)
 
 ## Code from diagram:
 Users 
