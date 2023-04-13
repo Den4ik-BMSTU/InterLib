@@ -1,0 +1,24 @@
+DELETE FROM USERS;
+DELETE FROM BOOKS;
+DELETE FROM LIKES;
+DELETE FROM AUTHORS;
+DELETE FROM USERS_FRIENDS;
+DELETE FROM BOOK_GENRES;
+DELETE FROM reviews;
+DELETE FROM review_like;
+DELETE FROM review_dislike;
+DELETE FROM BOOK_AUTHORS;
+
+ALTER TABLE USERS ALTER COLUMN ID RESTART WITH 1;
+ALTER TABLE BOOKS ALTER COLUMN ID RESTART WITH 1;
+ALTER TABLE reviews ALTER COLUMN review_id RESTART WITH 1;
+ALTER TABLE AUTHORS ALTER COLUMN ID RESTART WITH 1;
+
+
+MERGE INTO genres KEY (id)
+    VALUES ( 1, 'Детектив' ),
+           ( 2, 'Драма' ),
+           ( 3, 'Детская' ),
+           ( 4, 'Стих' ),
+           ( 5, 'Классика' ),
+           ( 6, 'Проза' );
